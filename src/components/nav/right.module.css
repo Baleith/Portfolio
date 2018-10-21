@@ -1,0 +1,10 @@
+.right {
+    place-self: center start;
+}
+
+.label {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    vertical-align: middle;
+    composes: bold from '../../styles/util.scss';
+}

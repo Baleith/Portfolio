@@ -1,0 +1,16 @@
+.top {
+    position: relative;
+}
+.topLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.topRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.label {
+    composes: bold from '../../styles/util.scss';
+}

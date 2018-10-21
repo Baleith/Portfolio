@@ -1,0 +1,7 @@
+.footer {
+    place-self: start center;
+}
+
+.label {
+    composes: bold from '../../styles/util.scss';
+}
