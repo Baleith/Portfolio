@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export const Content = ({ children }) => {
     return (
-        <div className="penisses">
+        <div id="content">
             <div id="content-left">
                 {children}
             </div>

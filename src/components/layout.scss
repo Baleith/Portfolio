@@ -40,7 +40,7 @@ body, html, #___gatsby, #___gatsby > *, #app  {
   display: grid;
   grid-template-areas:
           'left nav nav right'
-          'left content-left content-right right'
+          'left content content right'
           'left footer footer right';
   grid-template-rows: 1fr 90% 1fr;
   grid-template-columns: 1fr 45% 45% 1fr;
@@ -58,14 +58,18 @@ body, html, #___gatsby, #___gatsby > *, #app  {
   grid-area: right;
   background-color: $white;
 }
-#content-left {
+#content {
+  grid-area: content;
+  background-color: $color-content-right;
+}
+/*#content-left {
   grid-area: content-left;
   background-color: $color-content-left;
 }
 #content-right {
   grid-area: content-right;
   background-color: $color-content-right;
-}
+}*/
 footer {
   grid-area: footer;
   background-color: $white;
