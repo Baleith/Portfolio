@@ -6,6 +6,7 @@ import { Right } from './nav/right'
 import { Left } from './nav/left'
 import { Top } from './nav/top'
 import { Bottom } from './nav/bottom'
+import { Content } from './content'
 
 import './layout.scss'
 
@@ -35,13 +36,7 @@ const Layout = ({ children }) => (
             <Top />
             <Left />
 
-            <div id="content-left">
-                {children}
-            </div>
-
-            <div id="content-right">
-                content right
-            </div>
+            <Content children={children} />
 
             <Right />
             <Bottom />
@@ -51,8 +46,5 @@ const Layout = ({ children }) => (
   />
 )
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

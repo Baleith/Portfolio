@@ -6,5 +6,5 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     vertical-align: middle;
-    composes: bold from '../../styles/util.scss';
+    composes: bold from '../../styles/_util.scss';
 }

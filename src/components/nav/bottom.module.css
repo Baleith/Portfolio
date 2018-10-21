@@ -3,5 +3,5 @@
 }
 
 .label {
-    composes: bold from '../../styles/util.scss';
+    composes: bold from '../../styles/_util.scss';
 }
