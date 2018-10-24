@@ -8,3 +8,7 @@
     vertical-align: middle;
     composes: bold from '../../styles/_util.scss';
 }
+
+.active {
+    color: red;
+}

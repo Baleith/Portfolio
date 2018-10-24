@@ -60,16 +60,8 @@ body, html, #___gatsby, #___gatsby > *, #app  {
 }
 #content {
   grid-area: content;
-  background-color: $color-content-right;
 }
-/*#content-left {
-  grid-area: content-left;
-  background-color: $color-content-left;
-}
-#content-right {
-  grid-area: content-right;
-  background-color: $color-content-right;
-}*/
+
 footer {
   grid-area: footer;
   background-color: $white;
@@ -87,17 +79,9 @@ footer {
   height: 100vh;
 }
 #content-right {
-  width: 100%;
+    width: 100%;
 }
-#content-right:hover {
-  -webkit-transform: translate(-100%, 0);
-  -webkit-transition: -webkit-transform 1s linear;
-  -moz-transform: translate(2000px, 0);
-  -moz-transition: -moz-transform 1s linear;
-  -ms-transform: translate(2000px, 0);
-  -ms-transition: -ms-transform 1s linear;
 
-}
 
 .welcome-container {
   text-align: center;

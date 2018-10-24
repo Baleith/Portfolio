@@ -2,11 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { Right } from './nav/right'
-import { Left } from './nav/left'
-import { Top } from './nav/top'
-import { Bottom } from './nav/bottom'
-import { Content } from './content'
 
 import './layout.scss'
 
@@ -33,18 +28,15 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <div id="app">
-            <Top />
-            <Left />
-
-            <Content children={children} />
-
-            <Right />
-            <Bottom />
+            {children}
         </div>
       </>
     )}
   />
 )
 
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default Layout

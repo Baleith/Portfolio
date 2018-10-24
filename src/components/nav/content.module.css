@@ -1,0 +1,29 @@
+.content {
+    display: grid;
+    grid-template-areas:
+            'left right';
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    grid-area: left;
+    background-color: #EDEDED;
+}
+.right {
+  grid-area: right;
+  background-color: #1985A1;
+}
+
+.moveToLeft {
+    transform: translate(-100%, 0);
+    transition: -webkit-transform 1s linear;
+}
+.moveToRight {
+    transform: translate(100%, 0);
+    transition: -webkit-transform 1s linear;
+}
+
+.resetTransform {
+    transform: none;
+    transition: -webkit-transform 1s linear;
+}
