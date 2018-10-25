@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { RightContainer } from '../containers/RightContainer';
-import { Left } from '../components/nav/left'
+import { RightContainer } from '../containers/rightContainer';
+import { LeftContainer } from '../containers/leftContainer'
 import { Top } from '../components/nav/top'
 import { Bottom } from '../components/nav/bottom'
-import { Content } from '../components/nav/content'
+import { Content } from '../components/content'
 import { WelcomeText } from '../components/welcome-text'
 import Layout from '../components/layout'
 
@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
         return (
             <Layout>
                 <Top />
-                <Left onClick={this.handleClickAbout}/>
+                <LeftContainer onClick={this.handleClickAbout}/>
                 <Content moveToLeft={this.state.moveToLeft} moveToRight={this.state.moveToRight}/>
                 { this.state.showWelcomeText ? <WelcomeText /> : null }
                 <RightContainer onClick={this.handleClickContact}/>

@@ -2,13 +2,45 @@
     place-self: center start;
 }
 
-.label {
+.span {
     writing-mode: vertical-rl;
     text-orientation: upright;
     vertical-align: middle;
-    composes: bold from '../../styles/_util.scss';
+    composes: boldText from '../../styles/_util.scss';
 }
 
 .active {
     color: red;
+}
+
+/*ClockWise Effect*/
+.clockWise{
+    width: 5rem;
+}
+.open {
+    animation: open 1s forwards;
+
+
+    padding-right: 2rem;
+}
+.setHorizontalText{
+    animation: clock 1s forwards;
+}
+@keyframes open {
+    to {
+        width: 7rem;
+    }
+}
+@keyframes clock{
+
+    from {
+
+    }
+    to {
+        transform: rotate(-360deg);
+        text-orientation: upright;
+        writing-mode: horizontal-tb;
+    }
+
+
 }
