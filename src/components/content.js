@@ -3,22 +3,33 @@ import styles from "./content.module.css"
 import PropTypes from 'prop-types'
 import { Contact } from '../pages/contact';
 import { About } from '../pages/about';
+import { Projects } from '../pages/projects';
 
 export const Content = props => {
     return (
         <div id="content" className={ `${ styles.content }` }>
             <div className={ styles.left }>
-                <div className={ `${ styles.leftOuterLayer } ${ props.moveToRight ? styles.moveToRight : styles.resetTransform }` }>
+                <div className= {`
+                    ${ styles.leftOuterLayer }
+                    ${ props.moveToRight ? styles.moveToRight : styles.resetTransform }
+                    ${ props.showProjects ? styles.removeLeft : styles.resetTransform }
+                `}>
                     content left
                 </div>
-                { props.moveToRight ? <About/> : false }
+                { props.moveToRight ? <About/> : null }
             </div>
 
+            { props.showProjects ? <Projects /> : null }
+
             <div className={ styles.right }>
-                <div className={ `${ styles.rightOuterLayer } ${ props.moveToLeft ? styles.moveToLeft : styles.resetTransform }` }>
+                <div className={`
+                    ${ styles.rightOuterLayer }
+                    ${ props.moveToLeft ? styles.moveToLeft : styles.resetTransform }
+                    ${ props.showProjects ? styles.removeRight : styles.resetTransform }
+                `}>
                     content right
                 </div>
-                { props.moveToLeft ? <Contact/> : false }
+                { props.moveToLeft ? <Contact/> : null }
             </div>
         </div>
     );
@@ -28,4 +39,5 @@ export const Content = props => {
 Content.propTypes = {
     moveToRight: PropTypes.bool.isRequired,
     moveToLeft: PropTypes.bool.isRequired,
+    showProjects: PropTypes.bool.isRequired,
 };

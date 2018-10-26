@@ -3,7 +3,7 @@ import React from 'react'
 import { RightContainer } from '../containers/rightContainer';
 import { LeftContainer } from '../containers/leftContainer'
 import { Top } from '../components/nav/top'
-import { Bottom } from '../components/nav/bottom'
+import { BottomContainer } from '../containers/bottomContainer'
 import { Content } from '../components/content'
 import { WelcomeText } from '../components/welcome-text'
 import Layout from '../components/layout'
@@ -16,9 +16,11 @@ class IndexPage extends React.Component {
             showWelcomeText: false,
             moveToLeft:  false,
             moveToRight:  false,
+            showProjects:  false,
         }
         this.handleClickAbout = this.handleClickAbout.bind(this);
         this.handleClickContact = this.handleClickContact.bind(this);
+        this.handleClickProjects = this.handleClickProjects.bind(this);
     }
 
     handleClickAbout() {
@@ -33,16 +35,23 @@ class IndexPage extends React.Component {
             moveToRight: this.state.moveToRight ? false : false,
         })
     }
+    handleClickProjects() {
+        this.setState({
+            moveToLeft: false,
+            moveToRight: false,
+            showProjects: !this.state.showProjects,
+        })
+    }
 
     render() {
         return (
             <Layout>
                 <Top />
                 <LeftContainer onClick={this.handleClickAbout}/>
-                <Content moveToLeft={this.state.moveToLeft} moveToRight={this.state.moveToRight}/>
+                <Content moveToLeft={this.state.moveToLeft} moveToRight={this.state.moveToRight} showProjects={this.state.showProjects}/>
                 { this.state.showWelcomeText ? <WelcomeText /> : null }
                 <RightContainer onClick={this.handleClickContact}/>
-                <Bottom />
+                <BottomContainer onClick={this.handleClickProjects}/>
             </Layout>
         );
     }

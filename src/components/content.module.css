@@ -3,6 +3,8 @@
     grid-template-areas:
             'left right';
     grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
 }
 
 .left {
@@ -24,15 +26,23 @@
     height: 100%;
 }
 .moveToLeft {
-    transform: translate(-100%, 0);
-    transition: -webkit-transform 1s linear;
+    transform: translate(-100%, 0)!important;
+    transition: transform 1s linear!important;
 }
 .moveToRight {
-    transform: translate(100%, 0);
-    transition: -webkit-transform 1s linear;
+    transform: translate(100%, 0)!important;
+    transition: transform 1s linear!important;
+}
+.removeLeft {
+    transform: translate(-100%, 0)!important;
+    transition: transform 1s linear!important;
+}
+.removeRight {
+    transform: translate(100%, 0)!important;
+    transition: transform 1s linear!important;
 }
 
 .resetTransform {
     transform: none;
-    transition: -webkit-transform 1s linear;
+    transition: transform 1s linear;
 }

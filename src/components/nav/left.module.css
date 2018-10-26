@@ -2,11 +2,11 @@
     place-self: center end;
 }
 
-.label {
+.span {
     writing-mode: vertical-rl;
     text-orientation: upright;
     vertical-align: middle;
-    composes: bold from '../../styles/_util.scss';
+    composes: boldText from '../../styles/_util.scss';
 }
 .active {
     color: red;

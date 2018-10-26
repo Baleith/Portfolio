@@ -6,12 +6,12 @@ export const Left = (props) => {
     return (
         <aside id="aside-left" className={styles.left}>
             <div>
-                <label
+                <span
                     onClick={ props.onClick }
-                    className={ `${ styles.label } ${ props.isActive ? styles.active : null}` }
+                    className={ `${ styles.span } ${ props.isActive ? styles.active : null}` }
                 >
                     About
-                </label>
+                </span>
             </div>
         </aside>
     );
