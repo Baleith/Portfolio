@@ -14,7 +14,6 @@ export const Content = props => {
                     ${ props.moveToRight ? styles.moveToRight : styles.resetTransform }
                     ${ props.showProjects ? styles.removeLeft : styles.resetTransform }
                 `}>
-                    content left
                 </div>
                 { props.moveToRight ? <About/> : null }
             </div>
@@ -27,7 +26,6 @@ export const Content = props => {
                     ${ props.moveToLeft ? styles.moveToLeft : styles.resetTransform }
                     ${ props.showProjects ? styles.removeRight : styles.resetTransform }
                 `}>
-                    content right
                 </div>
                 { props.moveToLeft ? <Contact/> : null }
             </div>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const Right = (props) => {
     return (
         <aside id="aside-right" className={ styles.right }>
-            <div className={ `${ styles.clockWise } ${ props.isActive ? styles.open : null}`  }>
+            <div className={ `${ styles.container } ${ props.isActive ? styles.open : null}`  }>
                 <span
                     className={ `${ styles.span } ${ props.isActive ? styles.setHorizontalText : null}` }
                     /*onMouseEnter={ this.handlesTransition }

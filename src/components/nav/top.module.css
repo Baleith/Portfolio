@@ -1,16 +1,17 @@
 .top {
-    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.25rem;
 }
 .topLeft {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    margin-right: auto;
 }
 .topRight {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    margin-left: auto;
 }
-.label {
-    composes: bold from '../../styles/_util.scss';
+.span {
+    composes: boldText from '../../styles/_util.scss';
+}
+.spanSwedish {
+    padding-left: 0.15rem;
 }

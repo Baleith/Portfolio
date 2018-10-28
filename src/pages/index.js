@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 import { RightContainer } from '../containers/rightContainer';
 import { LeftContainer } from '../containers/leftContainer'
@@ -9,11 +9,11 @@ import { WelcomeText } from '../components/welcome-text'
 import Layout from '../components/layout'
 
 
-class IndexPage extends React.Component {
+class IndexPage extends Component {
     constructor(props) {
+
         super(props);
         this.state = {
-            showWelcomeText: false,
             moveToLeft:  false,
             moveToRight:  false,
             showProjects:  false,
@@ -21,18 +21,22 @@ class IndexPage extends React.Component {
         this.handleClickAbout = this.handleClickAbout.bind(this);
         this.handleClickContact = this.handleClickContact.bind(this);
         this.handleClickProjects = this.handleClickProjects.bind(this);
+        let tt = this.state.moveToLeft && this.state.moveToRight;
+        console.log(tt)
     }
 
     handleClickAbout() {
         this.setState({
             moveToRight: !this.state.moveToRight,
-            moveToLeft: this.state.moveToLeft ? false : false,
+            moveToLeft: false,
+            showProjects: false,
         })
     }
     handleClickContact() {
         this.setState({
             moveToLeft: !this.state.moveToLeft,
-            moveToRight: this.state.moveToRight ? false : false,
+            moveToRight: false,
+            showProjects: false,
         })
     }
     handleClickProjects() {
@@ -42,14 +46,18 @@ class IndexPage extends React.Component {
             showProjects: !this.state.showProjects,
         })
     }
-
+    showWelcomeText() {
+        if (this.state.moveToLeft === false && this.state.moveToRight === false && this.state.showProjects === false) {
+            return <WelcomeText />
+        }
+    }
     render() {
         return (
             <Layout>
                 <Top />
                 <LeftContainer onClick={this.handleClickAbout}/>
                 <Content moveToLeft={this.state.moveToLeft} moveToRight={this.state.moveToRight} showProjects={this.state.showProjects}/>
-                { this.state.showWelcomeText ? <WelcomeText /> : null }
+                { this.showWelcomeText() }
                 <RightContainer onClick={this.handleClickContact}/>
                 <BottomContainer onClick={this.handleClickProjects}/>
             </Layout>

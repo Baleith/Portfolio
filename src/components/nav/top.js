@@ -5,18 +5,18 @@ export const Top = () => {
     return (
         <div id="top" className={styles.top}>
             <div className={styles.topLeft}>
-                <label className={ styles.label }>
+                <span className={ styles.span }>
                     Jonathan Nilsson
-                </label>
+                </span>
             </div>
             <div className={styles.topRight}>
                 <div>
-                    <label className={ styles.label }>
+                    <span className={ styles.span }>
                         en
-                    </label>
-                    <label className={ styles.label }>
+                    </span>
+                    <span className={`${styles.span} ${styles.spanSwedish}`}>
                         sv
-                    </label>
+                    </span>
                 </div>
             </div>
         </div>

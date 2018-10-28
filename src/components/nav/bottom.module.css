@@ -1,5 +1,7 @@
 .footer {
     place-self: start center;
+
+    padding-top: 0.25rem;
 }
 
 .span {

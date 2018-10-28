@@ -26,7 +26,7 @@ $white: #FFFFFF;
 $color-content-right: hsla(0%, 99%, 64%, 1);
 $color-content-left: hsla(240%, 22%, 96%, 1);
 html {
-  font-family: sans-serif;
+  font-family: "Helvetica", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -82,47 +82,7 @@ footer {
     width: 100%;
 }
 
-
-.welcome-container {
-  text-align: center;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 400px;
-  height: 200px;
-  h1 {
-    font-size: 5em;
-  }
-}
-/*span {
-  font-size: 8rem;
-  position:relative;
-  display:inline-block;
-  white-space: pre;
-}*/
-
-.halfStyle {
-  color: $color-content-left;
-  //overflow:hidden;
-
-}
-.halfStyle:before {
-  display:block;
-  position:absolute;
-  z-index:1;
-  top:0;
-  left:0;
-  content: attr(data-content);
-  width: 50%;
-  overflow:hidden;
-  color: $color-content-right;
-}
-.color-right {
-  color: $color-content-right
-}
-.color-left {
-  color: $color-content-left;
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.75rem;
 }

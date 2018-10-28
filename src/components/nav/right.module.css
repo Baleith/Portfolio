@@ -1,5 +1,7 @@
 .right {
     place-self: center start;
+
+    padding-left: 0.25rem;
 }
 
 .span {
@@ -13,8 +15,7 @@
     color: red;
 }
 
-/*ClockWise Effect*/
-.clockWise{
+.container{
     width: 5rem;
 }
 .open {
