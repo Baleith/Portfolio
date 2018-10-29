@@ -1,11 +1,4 @@
 .welcomeContainer {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -26,25 +19,3 @@
 .wrapper3 {
     align-self: flex-start;
 }
-/*
-.halfStyle {
-    color: red;
-}
-.halfStyle:before {
-    display:block;
-    position:absolute;
-    z-index:1;
-    top:0;
-    left:0;
-    content: attr(data-content);
-    width: 50%;
-    overflow:hidden;
-    color: blue;
-}
-
-.colorRight {
-    color: red;
-}
-.colorLeft {
-    color: blue;
-}*/

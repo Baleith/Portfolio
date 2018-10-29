@@ -7,8 +7,8 @@ export const Project = props => {
         <div className={styles.card}>
             <h3>{props.title}</h3>
             <a href={props.url}>Besök sidan</a>
-            <img className={styles.img} src={props.img} alt="ds"/>
-            <p>{props.desc}</p>
+            <img className={styles.img} src={props.img} alt="ds" onClick={ props.onClick }/>
+            <p onClick={ props.onClick }>{props.desc}</p>
         </div>
     );
 };
@@ -19,4 +19,5 @@ Project.propTypes = {
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
 };

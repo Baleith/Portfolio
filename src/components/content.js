@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "./content.module.css"
 import PropTypes from 'prop-types'
-import { Contact } from '../pages/contact';
-import { About } from '../pages/about';
-import { Projects } from '../pages/projects';
+import { Contact } from './contact/contact';
+import { About } from './about/about';
+import { ProjectContainer } from '../containers/projectContainer';
 
 export const Content = props => {
     return (
@@ -18,7 +18,7 @@ export const Content = props => {
                 { props.moveToRight ? <About/> : null }
             </div>
 
-            { props.showProjects ? <Projects /> : null }
+            { props.showProjects ? <ProjectContainer /> : null }
 
             <div className={ styles.right }>
                 <div className={`

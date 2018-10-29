@@ -9,15 +9,14 @@ import { WelcomeText } from '../components/welcome-text'
 import Layout from '../components/layout'
 
 
-class IndexPage extends Component {
+export default class IndexPage extends Component {
     constructor(props) {
-
         super(props);
         this.state = {
             moveToLeft:  false,
             moveToRight:  false,
             showProjects:  false,
-        }
+        };
         this.handleClickAbout = this.handleClickAbout.bind(this);
         this.handleClickContact = this.handleClickContact.bind(this);
         this.handleClickProjects = this.handleClickProjects.bind(this);
@@ -64,5 +63,3 @@ class IndexPage extends Component {
         );
     }
 }
-
-export default IndexPage

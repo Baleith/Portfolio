@@ -3,7 +3,7 @@ import styles from './welcome-text.module.css'
 
 export const WelcomeText = () => {
         return (
-            <div className={styles.welcomeContainer}>
+            <div id="welcomeText" className={styles.welcomeContainer}>
                 <div className={styles.wrapper1}>
                     <span className={styles.span1}>
                         Välk
