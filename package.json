@@ -25,6 +25,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-google": "^0.11.0",
     "prettier": "^1.14.2"
   },
   "repository": {

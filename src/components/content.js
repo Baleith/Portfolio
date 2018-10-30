@@ -15,8 +15,8 @@ export const Content = props => {
                     ${ props.showProjects ? styles.removeLeft : styles.resetTransform }
                 `}>
                 </div>
-                { props.moveToRight ? <About/> : null }
             </div>
+            { props.moveToRight ? <About/> : null }
 
             { props.showProjects ? <ProjectContainer /> : null }
 
@@ -27,8 +27,8 @@ export const Content = props => {
                     ${ props.showProjects ? styles.removeRight : styles.resetTransform }
                 `}>
                 </div>
-                { props.moveToLeft ? <Contact/> : null }
             </div>
+            { props.moveToLeft ? <Contact/> : null }
         </div>
     );
 };

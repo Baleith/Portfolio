@@ -1,7 +1,5 @@
 .container {
-    position: absolute;
-    top:0;
-    z-index: -1;
+    grid-area: 1 / 2 / span 1 / span 1;
     padding:1rem;
 
 }

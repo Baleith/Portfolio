@@ -1,12 +1,12 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
 import { RightContainer } from '../containers/rightContainer';
-import { LeftContainer } from '../containers/leftContainer'
-import { Top } from '../components/nav/top'
-import { BottomContainer } from '../containers/bottomContainer'
-import { Content } from '../components/content'
-import { WelcomeText } from '../components/welcome-text'
-import Layout from '../components/layout'
+import { LeftContainer } from '../containers/leftContainer';
+import { Top } from '../components/nav/top';
+import { BottomContainer } from '../containers/bottomContainer';
+import { Content } from '../components/content';
+import { WelcomeText } from '../components/welcome-text';
+import Layout from '../components/layout';
 
 
 export default class IndexPage extends Component {
@@ -20,8 +20,6 @@ export default class IndexPage extends Component {
         this.handleClickAbout = this.handleClickAbout.bind(this);
         this.handleClickContact = this.handleClickContact.bind(this);
         this.handleClickProjects = this.handleClickProjects.bind(this);
-        let tt = this.state.moveToLeft && this.state.moveToRight;
-        console.log(tt)
     }
 
     handleClickAbout() {
@@ -29,25 +27,25 @@ export default class IndexPage extends Component {
             moveToRight: !this.state.moveToRight,
             moveToLeft: false,
             showProjects: false,
-        })
+        });
     }
     handleClickContact() {
         this.setState({
             moveToLeft: !this.state.moveToLeft,
             moveToRight: false,
             showProjects: false,
-        })
+        });
     }
     handleClickProjects() {
         this.setState({
             moveToLeft: false,
             moveToRight: false,
             showProjects: !this.state.showProjects,
-        })
+        });
     }
     showWelcomeText() {
         if (this.state.moveToLeft === false && this.state.moveToRight === false && this.state.showProjects === false) {
-            return <WelcomeText />
+            return <WelcomeText />;
         }
     }
     render() {

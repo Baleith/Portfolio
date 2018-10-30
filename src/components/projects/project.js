@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './project.module.css'
+import styles from './project.module.css';
 import PropTypes from 'prop-types';
 
 export const Project = props => {
@@ -7,7 +7,7 @@ export const Project = props => {
         <div className={styles.card}>
             <h3>{props.title}</h3>
             <a href={props.url}>Besök sidan</a>
-            <img className={styles.img} src={props.img} alt="ds" onClick={ props.onClick }/>
+            <img className={styles.img} src={props.img} alt="ds"/>
             <p onClick={ props.onClick }>{props.desc}</p>
         </div>
     );
