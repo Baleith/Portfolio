@@ -20,11 +20,6 @@
     grid-area: body;
     padding-right: 5rem;
 }
-.h2 {
-    
-}
-
-
 .tagContainer {
     grid-area: tags;
 }
