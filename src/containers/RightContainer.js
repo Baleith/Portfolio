@@ -1,8 +1,8 @@
-import React from 'react'
-import { Right } from '../components/nav/right'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { Right } from '../components/nav/right';
+import PropTypes from 'prop-types';
 
-export class RightContainer extends React.Component {
+export class RightContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +20,7 @@ export class RightContainer extends React.Component {
         this.props.onClick();
         this.setState({
             isActive: !this.state.isActive,
-        })
+        });
     }
 
 

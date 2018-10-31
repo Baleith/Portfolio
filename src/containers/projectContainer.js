@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Projects } from '../components/projects/projects';
 import { Project } from '../components/projects/project';
 import Sites from '../components/Projects/sites';
 
-export class ProjectContainer extends React.Component {
+export class ProjectContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,13 +23,9 @@ export class ProjectContainer extends React.Component {
     }
 
     handleClick(project) {
+        console.log(project)
         this.setState({
-            preview: {
-                desc: project.desc,
-                url: project.url,
-                img: project.img,
-                title: project.title
-            },
+            preview: project
         });
     }
 
