@@ -9,7 +9,7 @@
 }
 
 .active {
-    color: green;
+    composes: primaryColor1 from '../../styles/_util.scss';
 }
 .open {
     animation: open 1s forwards;

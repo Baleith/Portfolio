@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Right } from '../components/nav/right';
+import Right from '../components/nav/right';
 import PropTypes from 'prop-types';
 
 export class RightContainer extends Component {
