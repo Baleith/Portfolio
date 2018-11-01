@@ -3,7 +3,6 @@
     grid-template-areas: 'body img'
                         ' tags links';
     grid-template-columns: 1fr 65%;
-    margin-bottom: 10rem;
 }
 .imgContainer {
     grid-area: img;
@@ -15,43 +14,34 @@
 .linksContainer {
     grid-area: links;
 }
-
+.linksContainer ul a{
+    margin-left: auto;
+}
 .body {
     grid-area: body;
     padding-right: 5rem;
 }
-.h2 {
-    
-}
-
-
 .tagContainer {
     grid-area: tags;
 }
 
-.ul {
-    list-style-type: none;
-    display: flex;
-    flex-flow: wrap;
+.lastLetter {
+    composes: primaryColor1 from '../../styles/_util.scss';
 }
-.ul li span {
-    position: relative;
-    display: inline-block;
-    color: #252627;
-    padding: 0 0.5rem;
-    background-color: #F9F9F9;
+.divider {
+    height: 1px;
+    composes: blackBackgroundColor from '../../styles/_util.scss';
 }
-.ul li span:nth-child(1) {
-    padding-left: 0;
+.dividerFirst {
+    margin-top: 6.25rem;
+    width: 45px;
+}
+.dividerMiddle {
+    margin: 0.25rem 0;
+    width: 65px;
+}
+.dividerLast {
+    width: 45px;
+    margin-bottom: 6.25rem;
 }
 
-.ul li span:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("http://i.imgur.com/5O74VI6.jpg");
-    mix-blend-mode: lighten;
-}

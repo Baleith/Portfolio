@@ -1,8 +1,8 @@
-import React from "react"
-import { Left } from '../components/nav/left'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { Left } from '../components/nav/left';
+import PropTypes from 'prop-types';
 
-export class LeftContainer extends React.Component {
+export class LeftContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,12 +20,12 @@ export class LeftContainer extends React.Component {
         this.props.onClick();
         this.setState({
             isActive: !this.state.isActive,
-        })
+        });
     }
 
 
     render() {
-        return <Left onClick={this.handleClick} isActive={this.state.isActive}/>
+        return <Left onClick={this.handleClick} isActive={this.state.isActive}/>;
     }
 }
 
