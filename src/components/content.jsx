@@ -3,9 +3,9 @@ import { bool } from 'prop-types';
 import styles from './content.module.css';
 import { Contact } from './contact/contact';
 import { About } from './about/about';
-import ProjectContainer from '../containers/projectContainer';
+import { Projects } from './projects/projects';
 
-const Content = ({ moveToRight, moveToLeft, showProjects }) => (
+export const Content = ({ moveToRight, moveToLeft, showProjects }) => (
   <div id="content" className={styles.content}>
     <div className={styles.left}>
       <div className={`
@@ -17,7 +17,7 @@ const Content = ({ moveToRight, moveToLeft, showProjects }) => (
     </div>
     {moveToRight ? <About /> : null}
 
-    {showProjects ? <ProjectContainer /> : null}
+    {showProjects ? <Projects /> : null}
 
     <div className={styles.right}>
       <div className={`
@@ -36,5 +36,3 @@ Content.propTypes = {
   moveToLeft: bool.isRequired,
   showProjects: bool.isRequired,
 };
-
-export default Content;

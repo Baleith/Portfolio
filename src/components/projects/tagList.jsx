@@ -2,7 +2,7 @@ import React from 'react';
 import { arrayOf, string } from 'prop-types';
 import styles from './tagList.module.css';
 
-const ListElement = ({ tags }) => {
+export const TagList = ({ tags }) => {
   const listItems = tags.map((tag, i) => (
     <li key={i.toString()}>
       <span className={styles.span}>
@@ -18,8 +18,6 @@ const ListElement = ({ tags }) => {
   );
 };
 
-ListElement.propTypes = {
+TagList.propTypes = {
   tags: arrayOf(string).isRequired,
 };
-
-export default ListElement;
