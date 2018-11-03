@@ -1,9 +1,11 @@
 import React from 'react';
 import { string, arrayOf } from 'prop-types';
 import styles from './project.module.css';
-import TagList from './tagList';
+import { TagList } from './tagList';
+import { Anchor } from '../common/anchor';
+import { Divider } from '../common/divider';
 
-const Project = ({
+export const Project = ({
   title, desc, img, url, tags,
 }) => (
   <div>
@@ -20,15 +22,13 @@ const Project = ({
         <img className={styles.img} src={img} alt="ds" />
       </div>
       <div className={styles.linksContainer}>
-        <span className={styles.span}>Github</span>
+        <Anchor url={url} />
       </div>
       <div className={styles.tagContainer}>
         <TagList tags={tags} />
       </div>
     </div>
-    <div className={`${styles.divider} ${styles.dividerFirst}`} />
-    <div className={`${styles.divider} ${styles.dividerMiddle}`} />
-    <div className={`${styles.divider} ${styles.dividerLast}`} />
+    <Divider />
   </div>
 );
 
@@ -39,5 +39,3 @@ Project.propTypes = {
   desc: string.isRequired,
   tags: arrayOf(string).isRequired,
 };
-
-export default Project;

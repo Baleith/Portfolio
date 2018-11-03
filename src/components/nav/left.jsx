@@ -1,25 +1,24 @@
-import { bool, func } from 'prop-types';
 import React from 'react';
-import styles from './right.module.css';
+import { bool, func } from 'prop-types';
+import styles from './left.module.css';
 
-export const Right = ({ isActive, onClick }) => (
-  <aside id="aside-right" className={styles.right}>
+export const Left = ({ isActive, onClick }) => (
+  <aside id="aside-left" className={styles.left}>
     <div className={`${styles.container} ${isActive ? styles.open : null}`}>
       <span
-        className={`${styles.span} ${isActive ? styles.setHorizontalText : null}`}
+        className={`${styles.span} ${isActive ? styles.active : null}`}
         onClick={onClick}
         onKeyPress={onClick}
         role="button"
         tabIndex={0}
       >
-        {'Contact'}
+        {'About'}
       </span>
-
     </div>
   </aside>
 );
 
-Right.propTypes = {
+Left.propTypes = {
   isActive: bool.isRequired,
   onClick: func.isRequired,
 };

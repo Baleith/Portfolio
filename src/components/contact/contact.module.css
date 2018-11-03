@@ -1,6 +1,14 @@
 .container {
     grid-area: 1 / 2 / span 1 / span 1;
     padding:1rem;
+    composes: primaryBackgroundColor2 from '../../styles/_util.scss';
+}
 
+.h1 {
+    text-align: center;
+    display: inline-block;
+    font-size: 4rem;
+    margin: 0rem 0 3.25rem 0;
+    composes: primaryColor1 from '../../styles/_util.scss';
 }
 

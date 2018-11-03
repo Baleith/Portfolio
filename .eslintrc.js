@@ -34,8 +34,8 @@ module.exports = {
     rules: {
       "no-console": "off",
       "quotes": [ 2, "single" ],
-      "semi": "error",
-      "linebreak-style": 0
+      "linebreak-style": 0,
+      "import/prefer-default-export": false
     }
   };
     
