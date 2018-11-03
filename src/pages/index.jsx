@@ -33,10 +33,20 @@ export default class IndexPage extends Component {
   }
 
   handleClickProjects = () => {
+    console.log('har')
     this.setState(state => ({
       moveToLeft: false,
       moveToRight: false,
       showProjects: !state.showProjects,
+    }));
+  }
+
+  handleClick = (item) => {
+    console.log(item);
+    this.setState(state => ({
+      item: !state[item],
+      moveToLeft: false,
+      showProjects: false,
     }));
   }
 
@@ -45,7 +55,7 @@ export default class IndexPage extends Component {
     return (
       <Layout>
         <Top />
-        <LeftContainer onClick={this.handleClickAbout} />
+        <LeftContainer onClick={() => this.handleClick('moveToRight')} />
         <Content moveToLeft={moveToLeft} moveToRight={moveToRight} showProjects={showProjects} />
         { !moveToLeft && !moveToRight && !showProjects ? <WelcomeText /> : null }
         <RightContainer onClick={this.handleClickContact} />

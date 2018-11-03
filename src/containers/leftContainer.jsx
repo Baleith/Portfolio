@@ -13,7 +13,7 @@ export class LeftContainer extends Component {
 
   handleClick = () => {
     const { onClick } = this.props;
-    onClick();
+    onClick('sa');
     this.setState(state => ({ isActive: !state.isActive }));
   }
 
