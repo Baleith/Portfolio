@@ -1,14 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Montserrat|Open+Sans');
 .container {
-    grid-area: 1 / 2 / span 1 / span 1;
-    padding:1rem;
+    padding: 4rem 8rem;
+    animation: clock 2s forwards;
     composes: primaryBackgroundColor2 from '../../styles/_util.scss';
+    display: flex;
+    width: 80%;
+    flex-flow: wrap;
 }
 
+.t1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.t3 {
+    width: 100%;
+}
+
+.p1 {
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    composes: black from '../../styles/_util.scss';
+}
+.p2 {
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: italic;
+    composes: black from '../../styles/_util.scss';
+    font-family: 'Libre Baskerville', serif;
+}
+.p3 {
+    font-size: 2rem;
+    composes: black from '../../styles/_util.scss';
+}
 .h1 {
     text-align: center;
     display: inline-block;
     font-size: 4rem;
-    margin: 0rem 0 3.25rem 0;
-    composes: primaryColor1 from '../../styles/_util.scss';
+    margin: 0;
+    position: relative;
+    composes: black from '../../styles/_util.scss';
 }
+.span::after {
+    content: '';
+    height: 2rem;
+    background-color: #FF5E5B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    opacity: .5;
+    z-index: -1;
+}
+@keyframes clock{
 
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        width: 80%;
+    }
+
+
+}
