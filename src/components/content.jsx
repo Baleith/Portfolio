@@ -7,17 +7,16 @@ import { Projects } from './projects/projects';
 
 export const Content = ({ moveToRight, moveToLeft, showProjects }) => (
   <div id="content" className={styles.content}>
+    <About isOpen={moveToRight} />
     <div className={`
         ${styles.landing}
-        ${moveToLeft ? styles.moveToLeft : styles.resetTransform}
+        ${moveToRight ? styles.moveToRight : null}
+        ${moveToLeft ? styles.moveToLeft : null}
         ${showProjects ? styles.removeRight : styles.resetTransform}
       `}
     />
-
-    {moveToRight ? <About /> : null}
-
     {showProjects ? <Projects /> : null}
-    {moveToLeft ? <Contact /> : null}
+    <Contact isOpen={moveToLeft} />
   </div>
 );
 

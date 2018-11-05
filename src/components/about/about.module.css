@@ -1,11 +1,67 @@
-.container {
-    grid-area: 1 / 1 / span 1 / span 1;
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Montserrat|Open+Sans');
+.container { 
+    display: flex;
+    width: 0;
+    flex-flow: wrap;
+    -webkit-transition: 
+    width 1s ease-out, 
+    opacity 0.5s ease-out;
 }
-
+.wrapper {
+    display: block;
+    width: 100%;
+    margin: 4rem 0 4rem 4rem;
+}
+.initialTransform {
+    width: 0%;
+    opacity: 0;
+}
+.startTransform {
+    opacity: 1;
+    width: 80%;
+}
+.t1 {
+    display: flex;
+    align-items: center;
+}
+.t3 {
+    width: 100%;
+}
+.p1 {
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    composes: black from '../../styles/_util.scss';
+}
+.p2 {
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: italic;
+    composes: black from '../../styles/_util.scss';
+    font-family: 'Libre Baskerville', serif;
+}
+.p3 {
+    font-size: 2rem;
+    composes: black from '../../styles/_util.scss';
+}
 .h1 {
     text-align: center;
     display: inline-block;
-    font-size: 8rem;
-    margin: 3rem 0 10rem 0;
-    composes: primaryColor1 from '../../styles/_util.scss';
+    font-size: 4rem;
+    margin: 0;
+    position: relative;
+    composes: black from '../../styles/_util.scss';
+}
+.span::after {
+    content: '';
+    height: 2rem;
+    background-color: #FF5E5B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    opacity: .5;
+    z-index: -1;
 }

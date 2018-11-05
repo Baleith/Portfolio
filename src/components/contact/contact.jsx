@@ -1,9 +1,11 @@
 import React from 'react';
+import { bool } from 'prop-types';
 import styles from './contact.module.css';
-import l from '../../images/l.svg';
+import linkedin from '../../images/linkedin.svg';
 
-export const Contact = () => (
-  <div className={styles.container}>
+export const Contact = ({ isOpen }) => (
+  <div className={`${styles.container} ${isOpen ? styles.startTransform : styles.initialTransform}`}>
+    <div className={styles.wrapper}>
     <div className={styles.t1}><h1 className={styles.h1}>
       <span className={styles.span} />
       {'Kontakta mig'}
@@ -14,9 +16,16 @@ export const Contact = () => (
     <p className={styles.p2}>Maila mig på</p>
     <p className={styles.p3}>jonathan.j.nilsson@gmail.com</p>
     </div>
-    <div>
+    <div className={styles.bottom}>
       <p className={styles.p2}>eller över</p>
-      <img src={l} />
+      <div className={styles.imgContainer}>
+        <img src={linkedin} alt="linkedin" />
+      </div>
     </div>
   </div>
+  </div>
 );
+
+Contact.propTypes = {
+  isOpen: bool.isRequired,
+};

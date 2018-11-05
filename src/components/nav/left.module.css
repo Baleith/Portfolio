@@ -19,10 +19,10 @@
     text-align: right;
 }
 .open {
-    animation: open 1s forwards;
+    /* animation: open 1s forwards;
 
 
-    padding-right: 2rem;
+    padding-right: 2rem; */
 }
 .setHorizontalText{
     animation: clock 1s forwards;

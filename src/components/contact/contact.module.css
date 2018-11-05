@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Montserrat|Open+Sans');
 .container {
-    padding: 4rem 8rem;
-    animation: clock 2s forwards;
-    composes: primaryBackgroundColor2 from '../../styles/_util.scss';
     display: flex;
-    width: 80%;
+    width: 0;
     flex-flow: wrap;
+    -webkit-transition: 
+    width 1s ease-out, 
+    opacity 0.5s ease-out;
 }
-
+.wrapper {
+    display: block;
+    width: 100%;
+    margin: 4rem 0 4rem 4rem;
+}
+.initialTransform {
+    width: 0%;
+    opacity: 0;
+}
+.startTransform {
+    opacity: 1;
+    width: 80%;
+}
 .t1 {
     width: 100%;
     display: flex;
@@ -17,6 +29,16 @@
     width: 100%;
 }
 
+.bottom {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: auto;
+    display: inline-block;
+}
+.imgContainer {
+    width: 100%;
+    text-align: center;
+}
 .p1 {
     font-style: normal;
     font-family: 'Raleway', sans-serif;
@@ -54,17 +76,4 @@
     right: 0;
     opacity: .5;
     z-index: -1;
-}
-@keyframes clock{
-
-    from {
-        width: 0%;
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        width: 80%;
-    }
-
-
 }
