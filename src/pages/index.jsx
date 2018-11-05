@@ -55,7 +55,7 @@ export default class IndexPage extends Component {
     return (
       <Layout>
         <Top />
-        <LeftContainer onClick={() => this.handleClick('moveToRight')} />
+        <LeftContainer onClick={this.handleClickAbout} />
         <Content moveToLeft={moveToLeft} moveToRight={moveToRight} showProjects={showProjects} />
         { !moveToLeft && !moveToRight && !showProjects ? <WelcomeText /> : null }
         <RightContainer onClick={this.handleClickContact} />
@@ -64,3 +64,4 @@ export default class IndexPage extends Component {
     );
   }
 }
+/* onClick={() => this.handleClick('moveToRight')} */

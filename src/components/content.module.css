@@ -1,44 +1,31 @@
 .content {
     display: flex;
-    /* grid-auto-flow: column;
-    grid-template-rows: 100%;
-    grid-template-columns: 25% 75%; */
     overflow: hidden;
 }
-
-.left {
-    grid-area: 1 / 1 / span 1 / span 1;
-}
-.right {
-    grid-area: 1 / 2 / span 1 / span 1;
-}
-
 .landing {
-    width: 100%;
-    transition: width 1s ease-in-out;
-
-    
-    /* grid-column: 1 / span 2; */
+    flex-basis: auto;
+    flex-grow:2;
+    transition: margin 1s ease-in-out; 
     composes: primaryBackgroundColor1 from '../styles/_util.scss';
-    /* height: 100%; */
 }
 .moveToLeft {
-    width: 20%;
-    /* transform: translate(-75%, 0)!important;
-    transition: transform 1s linear!important; */
+    margin: 4rem 0;
 }
 .moveToRight {
-    transform: translate(75%, 0)!important;
-    transition: transform 1s linear!important;
+    margin: 4rem 0;
 }
-.removeLeft {
+/* .moveToRightReset {
+    width: 100%;
+} */
+
+/* .removeLeft {
     transform: translate(-75%, 0)!important;
     transition: transform 1s linear!important;
 }
 .removeRight {
     transform: translate(75%, 0)!important;
     transition: transform 1s linear!important;
-}
+} */
 
 /* .resetTransform {
     transform: none;
