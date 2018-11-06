@@ -14,6 +14,7 @@ export const Projects = () => {
       img={img}
       desc={desc}
       tags={tags}
+      id={id}
     />
   ));
 
