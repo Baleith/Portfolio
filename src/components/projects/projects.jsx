@@ -18,7 +18,7 @@ export const Projects = () => {
   ));
 
   return (
-    <div className={styles.container}>
+    <div id="projects" className={styles.container}>
       <h1 className={styles.h1}>Projects</h1>
       {projects}
     </div>

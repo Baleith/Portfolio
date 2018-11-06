@@ -1,12 +1,12 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import styles from './content.module.css';
-import { Contact } from './contact/contact';
-import { About } from './about/about';
-import { Projects } from './projects/projects';
+import styles from './landing.module.css';
+import { Contact } from '../contact/contact';
+import { About } from '../about/about';
+import { WelcomeText } from './welcome-text';
 
 export const Content = ({ moveToRight, moveToLeft, showProjects }) => (
-  <div id="content" className={styles.content}>
+  <div id="landing" className={styles.container}>
     <About isOpen={moveToRight} />
     <div className={`
         ${styles.landing}
@@ -14,8 +14,9 @@ export const Content = ({ moveToRight, moveToLeft, showProjects }) => (
         ${moveToLeft ? styles.moveToLeft : null}
         ${showProjects ? styles.removeRight : styles.resetTransform}
       `}
-    />
-    {showProjects ? <Projects /> : null}
+    >
+      { !moveToLeft && !moveToRight && !showProjects ? <WelcomeText /> : null }
+    </div>
     <Contact isOpen={moveToLeft} />
   </div>
 );

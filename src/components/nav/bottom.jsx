@@ -3,7 +3,7 @@ import { bool, func } from 'prop-types';
 import styles from './bottom.module.css';
 
 export const Bottom = ({ isActive, onClick }) => (
-  <footer className={styles.footer}>
+  <div id="bottom" className={styles.container}>
     <div className={`${isActive ? styles.open : null}`}>
       <span
         className={`${styles.span} ${isActive ? styles.active : null}`}
@@ -15,7 +15,7 @@ export const Bottom = ({ isActive, onClick }) => (
         {'Projects'}
       </span>
     </div>
-  </footer>
+  </div>
 );
 
 Bottom.propTypes = {

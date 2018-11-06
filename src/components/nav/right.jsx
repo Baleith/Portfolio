@@ -6,12 +6,13 @@ export const Right = ({ isActive, onClick }) => (
   <aside id="aside-right" className={styles.right}>
     <div className={`${styles.container} ${isActive ? styles.open : null}`}>
       <span
-        className={`${styles.span} ${isActive ? styles.setHorizontalText : null}`}
+        className={styles.wrapper}
         onClick={onClick}
         onKeyPress={onClick}
         role="button"
         tabIndex={0}
       >
+        <span className={`${isActive ? styles.doubleCrossedText : null}`} />
         {'Contact'}
       </span>
 

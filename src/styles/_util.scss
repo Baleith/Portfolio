@@ -1,14 +1,57 @@
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:black|Raleway');
-@import url('https://fonts.googleapis.com/css?family=Spectral');
-@import url('https://fonts.googleapis.com/css?family=Rakkas');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-@import url('https://fonts.googleapis.com/css?family=Lato'); */
-.boldText {
+.navText {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 0.75rem;
+  font-size: 1.25rem;
 }
-
+.navText:hover {
+  letter-spacing: 4rem;
+}
+.navText:focus {
+  outline: none;
+}
+.crossedText::after {
+  content: '';
+  height: 2rem;
+  background-color: #FF5E5B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  opacity: .5;
+  z-index: -1;
+}
+.doubleCrossedText::after {
+  content: '';
+  height: 4rem;
+  width: 1rem;
+  background-color: #FF5E5B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  opacity: .5;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.doubleCrossedText::before {
+  content: '';
+  height: 4rem;
+  width: 1rem;
+  background-color: #FF5E5B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  opacity: .5;
+  z-index: -1;
+  transform: rotate(-45deg);
+}
 .primaryColor1 {
   color: #FF5E5B;
 }
@@ -24,10 +67,6 @@
 
 .blackBackgroundColor {
   background-color:#252627;
-}
-.black {
-/* // color :#1c1b20; */
- color: #373a3c
 }
 
 

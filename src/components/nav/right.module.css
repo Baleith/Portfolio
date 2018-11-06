@@ -1,38 +1,19 @@
 .right {
     place-self: center start;
-
     padding-left: 0.25rem;
 }
-
-.span {
+.wrapper {
     writing-mode: vertical-rl;
     text-orientation: upright;
     vertical-align: middle;
-    composes: boldText from '../../styles/_util.scss';
+    position: relative;
+    composes: navText from '../../styles/_util.scss';
+}
+.doubleCrossedText {
+    composes: doubleCrossedText from '../../styles/_util.scss';
 }
 
-.active {
-    color: red;
-}
-
-.container{
-    width: 5rem;
-}
-.open {
-    animation: open 1s forwards;
-
-
-    padding-right: 2rem;
-}
-.setHorizontalText{
-    animation: clock 1s forwards;
-}
-@keyframes open {
-    to {
-        width: 7rem;
-    }
-}
-@keyframes clock{
+@keyframes open{
 
     from {
 
