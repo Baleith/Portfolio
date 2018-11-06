@@ -6,12 +6,13 @@ export const Left = ({ isActive, onClick }) => (
   <aside id="aside-left" className={styles.left}>
     <div className={`${styles.container} ${isActive ? styles.open : null}`}>
       <span
-        className={`${styles.span} ${isActive ? styles.active : null}`}
+        className={styles.wrapper}
         onClick={onClick}
         onKeyPress={onClick}
         role="button"
         tabIndex={0}
       >
+        <span className={`${isActive ? styles.doubleCrossedText : null}`} />
         {'About'}
       </span>
     </div>

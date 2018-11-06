@@ -10,7 +10,7 @@
     margin-left: auto;
 }
 .span {
-    composes: boldText from '../../styles/_util.scss';
+    composes: navText from '../../styles/_util.scss';
 }
 .spanSwedish {
     padding-left: 0.15rem;

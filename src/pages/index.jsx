@@ -4,9 +4,9 @@ import { RightContainer } from '../containers/rightContainer';
 import { LeftContainer } from '../containers/leftContainer';
 import { Top } from '../components/nav/top';
 import { BottomContainer } from '../containers/bottomContainer';
-import { Content } from '../components/content';
-import { WelcomeText } from '../components/welcome-text';
+import { Content } from '../components/landing/landing';
 import Layout from '../components/layout';
+import { Projects } from '../components/projects/projects';
 
 
 export default class IndexPage extends Component {
@@ -54,12 +54,12 @@ export default class IndexPage extends Component {
     const { moveToLeft, moveToRight, showProjects } = this.state;
     return (
       <Layout>
-        <Top />
         <LeftContainer onClick={this.handleClickAbout} />
-        <Content moveToLeft={moveToLeft} moveToRight={moveToRight} showProjects={showProjects} />
-        { !moveToLeft && !moveToRight && !showProjects ? <WelcomeText /> : null }
+        <Top />
         <RightContainer onClick={this.handleClickContact} />
+        <Content moveToLeft={moveToLeft} moveToRight={moveToRight} showProjects={showProjects} />
         <BottomContainer onClick={this.handleClickProjects} />
+        <Projects />
       </Layout>
     );
   }

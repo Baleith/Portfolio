@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:black|Raleway:black, extrabold');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:black, extrabold');
 // Body
 $body-bg: #f8fafc;
 
@@ -7,80 +7,62 @@ $white: #FFFFFF;
 $primaryBackgroundColor1: #FF5E5B;
 $primaryBackgroundColor2: #F9F9F9;
 $print: #606060;
-$black:#252627;
-
+$black:#373a3c;
+$blacker:#252627;
 html {
   font-family: "Helvetica", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  height: 100%;
   font-size: 16px;
 }
 body {
   margin: 0;
-}
-body, html, #___gatsby, #___gatsby > *, #app  {
-  height: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
 }
 #app {
   display: grid;
-  grid-template-rows: 1fr 90% 1fr;
-  grid-template-columns: auto 1fr 1fr 1fr auto;
-}
-
-#welcomeText {
-  z-index: 9;
-  grid-area: 2 / 3 / span 1 / span 1;
-  background-color: transparent;
-}
-#top {
-  grid-area: 1 / 2 / span 1 / span 3;
-  background-color: $white;
+  grid-template-rows: 5vh 90vh 5vh auto;
+  grid-template-columns: 5vw 90vw 5vw;
 }
 #aside-left {
-  grid-area: 1 / 1 / span 3 / span 1;
-  background-color: $white;
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+#top {
+  grid-area: 1 / 2 / span 1 / span 1;
 }
 #aside-right {
-  grid-area: 1 / 5 / span 3 / span 1;
-  background-color: $white;
+  grid-area: 1 / 3 / span 2 / span 1;
 }
-#content {
-  grid-area: 2 / 2 / span 1 / span 3;
+#landing {
+  grid-area: 2 / 2 / span 1 / span 1;
 }
-
-footer {
-  grid-area: 3 / 2 / span 1 / span 3;
-  background-color: $white;
+#bottom {
+  grid-area: 3 / 2 / span 1 / span 1;
 }
-
-#app {
-  width: 100vw;
-  height: 100vh;
-}
-#content-right {
-    width: 100%;
+#projects {
+  grid-area: 4 / 2 / span 1 / span 1;
 }
 
 a {
   color: #252627;
 }
-h2, h3, h4 {
+h1, h2, h3, h4, span {
   font-family: 'Montserrat', sans-serif;
-  color: $black;
+}
+h2, h3, h4 {
+  color: $blacker;
   line-height: 2.75rem;
   font-weight: bolder;
   font-size: 2rem;
   margin: 0 0 2rem 0;
 }
-h1 {
-  font-family: 'Montserrat', sans-serif;
-}
 
 p {
-  color:$print;
+  color:$black;
   font-weight: 900;
   font-family: 'Raleway', sans-serif;
   line-height: 1.75rem

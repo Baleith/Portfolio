@@ -1,6 +1,5 @@
 .container {
     grid-area: 1 / 1 /span 2 / span 2;
-    overflow-y: scroll;
     padding: 4rem 8rem;
     composes: primaryBackgroundColor2 from '../../styles/_util.scss';
 }
