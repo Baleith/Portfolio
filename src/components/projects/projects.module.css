@@ -10,11 +10,27 @@
 }
 
 .h1 {
-    text-align: center;
     display: inline-block;
     font-size: 8rem;
+    position: relative;
     margin: 3rem 0 10rem 0;
-    composes: primaryColor1 from '../../styles/_util.scss';
+    z-index: 3;
 }
 
-
+.span {
+    composes: crossedText from '../../styles/_util.scss';
+    z-index: 2;
+}
+@media (max-width: 860px) { 
+    .h1 {
+        font-size: 4rem;
+    }
+}
+@media (max-width: 400px) { 
+    .container {
+        padding: 1rem;
+    }
+    .h1 {
+        margin: 3rem 0 3rem 0;
+    }
+}

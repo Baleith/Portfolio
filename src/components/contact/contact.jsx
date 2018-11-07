@@ -14,7 +14,7 @@ export const Contact = ({ isOpen }) => (
       </div>
       <div className={styles.t3}>
         <p className={styles.p1}>Apparently we had reached a great height in the atmosphere, for the sky was a dead black</p>
-        <p className={styles.p2}>Maila mig på</p>
+        <p className={styles.p2}>Maila mig på KONTAKTA MIG POPUP</p>
         <p className={styles.p3}>jonathan.j.nilsson@gmail.com</p>
       </div>
       <div className={styles.bottom}>

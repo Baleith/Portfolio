@@ -2,25 +2,184 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    transform: rotate
 }
 
-.span1, .span2, .span3 {
-    font-size: 10rem;
-    line-height: 5rem;
-    font-weight: 800;
+
+.h1 {
+    z-index: 4;
+    font-size: 6rem;
 }
-.wrapper1 {
-    /*background-color: #C81D25;*/
+.span1::after, .span2::after, .span3::after, .span4::after, .span5::after {
+    content: '';
+    height: 100%;
+    width: 25%;
+    background-color: #FF5E5B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    z-index: -1;
+}
+.span1::before, .span2::before, .span3::before, .span4::before, .span5::before {
+    content: '';
+    height: 100%;
+    width: 25%;
+    background-color: #FF5E5B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    z-index: -1;
+}
+.span1::after {
+    opacity: .1;
+    transform: rotate(0deg);
+    animation: rotation1 5s infinite linear;
+}
+.span1::before {
+    opacity: .2;
+    transform: rotate(36deg);
+    animation: rotation2 5s infinite linear;
+}
+.span2::after {
+    opacity: .3;
+    transform: rotate(72deg);
+    animation: rotation3 5s infinite linear;
+}
+.span2::before {
+    opacity: .4;
+    transform: rotate(108deg);
+    animation: rotation4 5s infinite linear;
+}
+.span3::after {
+    opacity: .5;
+    transform: rotate(144deg);
+    animation: rotation5 5s infinite linear;
+}
+.span3::before {
+    opacity: .6;
+    transform: rotate(180deg);
+    animation: rotation6 5s infinite linear;
+}
+.span4::after {
+    opacity: .7;
+    transform: rotate(216deg);
+    animation: rotation7 5s infinite linear;
+}
+.span4::before {
+    opacity: .8;
+    transform: rotate(252deg);
+    animation: rotation8 5s infinite linear;
+}
+.span5::after {
+    opacity: .9;
+    transform: rotate(288deg);
+    animation: rotation9 8s infinite linear alternate;
+}
+.span5::before {
+    opacity: 1;
+    transform: rotate(324deg);
+    animation: rotation10 8s linear infinite alternate;
+}
+
+.wrapper {
     align-self: flex-start;
+    z-index: 5;
 }
-.wrapper2 {
-    align-self: center;
+
+/* @media (max-width: 400px) {
+    .span1 {
+        font-size: 4rem;
+        line-height: 2rem;
+    }
 }
-.wrapper3 {
-    align-self: flex-start;
+@keyframes rotation1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
-/* #welcomeText {
-    z-index: 9;
-    grid-area: 2 / 2 / span 1 / span 1;
-    background-color: transparent;
-  } */
+@keyframes rotation2 {
+    from {
+        transform: rotate(36deg);
+    }
+    to {
+        transform: rotate(395deg);
+    }
+}
+@keyframes rotation3 {
+    from {
+        transform: rotate(72deg);
+    }
+    to {
+        transform: rotate(431deg);
+    }
+}
+@keyframes rotation4 {
+    from {
+        transform: rotate(108deg);
+    }
+    to {
+        transform: rotate(467deg);
+    }
+}
+@keyframes rotation5 {
+    from {
+        transform: rotate(144deg);
+    }
+    to {
+        transform: rotate(503deg);
+    }
+}
+@keyframes rotation6 {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(539deg);
+    }
+}
+@keyframes rotation7 {
+    from {
+        transform: rotate(216deg);
+    }
+    to {
+        transform: rotate(575deg);
+    }
+}
+@keyframes rotation8 {
+    from {
+        transform: rotate(252deg);
+    }
+    to {
+        transform: rotate(611deg);
+    }
+}*/
+@keyframes rotation9 {
+    from {
+        background-color: #FFA69E;
+        /* transform: rotate(288deg); */
+    }
+    to {
+        background-color: #84DCC6;
+        /* transform: rotate(647deg); */
+    }
+}
+@keyframes rotation10 {
+    0% {
+        background-color: #FFA69E;
+        /* transform: rotate(324deg); */
+    }
+    100% {
+        background-color: #A5FFD6;
+        /* transform: rotate(683deg); */
+    }
+} 
