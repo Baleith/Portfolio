@@ -1,0 +1,39 @@
+.divider {
+  height: 1px;
+  composes: blackBackgroundColor from '../../styles/_util.scss';
+}
+.dividerFirst {
+  margin-top: 6.25rem;
+  width: 45px;
+}
+.dividerMiddle {
+  margin: 0.25rem 0 0.25rem 0;
+  width: 65px;
+}
+.dividerLast {
+  width: 45px;
+  margin-bottom: 6.25rem;
+}
+
+.odd {
+  .divider {
+    margin-left: auto!important;
+  }
+}
+
+.even {
+  .divider {
+    margin-right: auto!important;
+  }
+}
+
+@media (max-width: 750px) { 
+  .dividerFirst {
+    margin-top: 3.25rem;
+    width: 45px;
+  }
+  .dividerLast {
+    width: 45px;
+    margin-bottom: 3.25rem;
+  }
+}

@@ -1,7 +1,8 @@
 .top {
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 0.25rem;
+    place-self: end center;
+    /* display: flex;
+    align-items: flex-end;*/
+    padding-bottom: 0.25rem; 
 }
 .topLeft {
     margin-right: auto;
@@ -14,4 +15,25 @@
 }
 .spanSwedish {
     padding-left: 0.15rem;
+}
+
+.span {
+    composes: navText from '../../styles/_util.scss';
+}
+.active {
+    letter-spacing: 4em;
+    margin-right: -3em; 
+}
+.coloredText {
+    color: #84DCC6;
+}
+.coloredText2 {
+    color: #FF5E5B;;
+}
+
+@media (max-width: 400px) {
+    .active {
+        letter-spacing: 1em;
+        margin-right: -1em; 
+    }
 }

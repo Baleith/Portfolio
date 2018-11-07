@@ -1,4 +1,9 @@
 import styrbostad from '../../images/styrbostsad.jpg';
+import tillnyktrad from '../../images/tillnyktrad.jpg';
+import matforgiftad from '../../images/matforgiftad.jpg';
+import hyped from '../../images/hyped.jpg';
+import fotboll from '../../images/fotboll.jpg';
+import portfolio from '../../images/fotboll.jpg';
 
 const sites = [
   {
@@ -6,7 +11,7 @@ const sites = [
     url: 'www.bostader.se',
     git: 'https://github.com/Baleith/Portfolio',
     title: 'Styrbostad - en samlingsida för hyresrätter',
-    img: styrbostad,
+    img: portfolio,
     desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... med en tid om en annant som ocj skapa ingetr mer än text som behöver det annananana med annas ock med mera blev alltiod mer än du tror.',
     tags: ['Vue.js', 'PHP 7.0', 'Laravel'],
   },
@@ -15,7 +20,7 @@ const sites = [
     url: 'www.bostader.se',
     git: 'https://github.com/Baleith/Portfolio',
     title: 'Alkohol - en samlingsida för hyresrätter',
-    img: styrbostad,
+    img: matforgiftad,
     desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
     tags: ['Vue.js', 'PHP 7.0', 'Laravel'],
   },
@@ -24,13 +29,13 @@ const sites = [
     url: 'www.bostader.se',
     git: 'https://github.com/Baleith/Portfolio',
     title: 'Matförgiftad - en samlingsida för hyresrätter',
-    img: styrbostad,
+    img: tillnyktrad,
     desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
     tags: ['Vue.js', 'PHP 7.0', 'Laravel'],
   },
   {
     id: 3,
-    url: 'www.bostader.se',
+    url: 'https://www.bostader.se/',
     git: 'https://github.com/Baleith/Portfolio',
     title: 'Styrbostad - en samlingsida för hyresrätter',
     img: styrbostad,
@@ -42,7 +47,7 @@ const sites = [
     url: 'www.bostader.se',
     git: 'https://github.com/Baleith/Portfolio',
     title: 'Alkohol - en samlingsida för hyresrätter',
-    img: styrbostad,
+    img: fotboll,
     desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
     tags: ['Vue.js', 'PHP 7.0', 'Laravel'],
   },
@@ -51,7 +56,7 @@ const sites = [
     url: 'www.bostader.se',
     git: 'https://github.com/Baleith/Portfolio',
     title: 'Matförgiftad - en samlingsida för hyresrätter',
-    img: styrbostad,
+    img: hyped,
     desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
     tags: ['Vue.js', 'PHP 7.0', 'Laravel'],
   },

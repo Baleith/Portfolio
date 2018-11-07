@@ -4,14 +4,15 @@
   font-size: 1.25rem;
 }
 .navText:hover {
-  letter-spacing: 4rem;
+  /* letter-spacing: 4rem; */
 }
 .navText:focus {
   outline: none;
 }
+
 .crossedText::after {
   content: '';
-  height: 2rem;
+  height: 40%;
   background-color: #FF5E5B;
   position: absolute;
   top: 0;

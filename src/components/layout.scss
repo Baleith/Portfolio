@@ -26,7 +26,7 @@ body {
 #app {
   display: grid;
   grid-template-rows: 5vh 90vh 5vh auto;
-  grid-template-columns: 5vw 90vw 5vw;
+  grid-template-columns: 5% 90% 5%;
 }
 #aside-left {
   grid-area: 1 / 1 / span 2 / span 1;
@@ -66,4 +66,14 @@ p {
   font-weight: 900;
   font-family: 'Raleway', sans-serif;
   line-height: 1.75rem
+}
+
+@media (max-width: 400px) {
+  #app {
+    grid-template-rows: 6vh 88vh 6vh auto;
+    grid-template-columns: 10vw 80vw 10vw;
+  }
+  #projects {
+    grid-area: 4 / 1 / span 1 / span 3;
+  }
 }

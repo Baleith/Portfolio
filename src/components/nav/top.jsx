@@ -1,16 +1,12 @@
 import React from 'react';
 import styles from './top.module.css';
 
-export const Top = () => (
+export const Top = ({ active = true }) => (
   <div id="top" className={styles.top}>
-    <div className={styles.topLeft}>
-      <span className={styles.span}>Jonathan Nilsson</span>
-    </div>
-    <div className={styles.topRight}>
-      <div>
-        <span className={styles.span}>en</span>
-        <span className={`${styles.span} ${styles.spanSwedish}`}>sv</span>
-      </div>
-    </div>
+    <span className={`${active ? styles.active : null} ${styles.span}`}>
+      {'Välk'}
+      <span className={`${active ? styles.coloredText : null} ${styles.span}`}>o</span>
+      <span className={`${active ? styles.coloredText2 : null} ${styles.span}`}>m</span>men
+    </span>
   </div>
 );
