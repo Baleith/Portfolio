@@ -5,24 +5,24 @@ import { Contact } from '../contact/contact';
 import { About } from '../about/about';
 import { WelcomeText } from './welcome-text';
 
-export const Content = ({ moveToRight, moveToLeft, showProjects }) => (
+export const Landing = ({ homeActive, contactActive, aboutActive }) => (
   <div id="landing" className={styles.container}>
-    <About isOpen={moveToRight} />
+    <About isOpen={aboutActive} />
     <div className={`
         ${styles.landing}
-        ${moveToRight ? styles.moveToRight : null}
-        ${moveToLeft ? styles.moveToLeft : null}
-        ${showProjects ? styles.removeRight : styles.resetTransform}
+        ${aboutActive ? styles.moveToRight : null}
+        ${contactActive ? styles.moveToLeft : null}
+        ${homeActive ? styles.removeRight : styles.resetTransform}
       `}
     >
-      { !moveToLeft && !moveToRight && !showProjects ? <WelcomeText /> : null }
+      { !contactActive && !aboutActive ? <WelcomeText /> : null }
     </div>
-    <Contact isOpen={moveToLeft} />
+    <Contact isOpen={contactActive} />
   </div>
 );
 
-Content.propTypes = {
-  moveToRight: bool.isRequired,
-  moveToLeft: bool.isRequired,
-  showProjects: bool.isRequired,
+Landing.propTypes = {
+  aboutActive: bool.isRequired,
+  contactActive: bool.isRequired,
+  homeActive: bool.isRequired,
 };

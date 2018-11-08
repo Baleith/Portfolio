@@ -11,20 +11,19 @@ export const Odd = ({ data }) => {
   } = data;
 
   return (
-    <div className={styles.even}>
+    <div className={`${styles.odd} ${styles.projectContainer}`}>
       <div className={styles.previewContainer}>
         <div className={styles.title}>
           <h2 className={styles.h2}>
             {title}
-            <span className={styles.lastLetter}>.</span>
           </h2>
         </div>
 
         <div className={styles.imgContainer}>
           <img className={styles.img} src={img} alt="project" />
           <div className={styles.linksContainer}>
-            <Anchor url={git} name="<Källa>" />
-            <Anchor url={url} name="Besök" />
+            <Anchor url={git} name="</Källa>" />
+            {url ? <Anchor url={url} name="Besök" /> : null}
           </div>
         </div>
         <div className={styles.body}>
@@ -36,7 +35,9 @@ export const Odd = ({ data }) => {
         </div>
 
       </div>
-      <Divider type="odd" />
+      <div className={styles.dividerContainer}>
+        <Divider type="odd" />
+      </div>
     </div>
   );
 };
@@ -45,7 +46,7 @@ Odd.propTypes = {
   data: shape({
     img: string.isRequired,
     title: string.isRequired,
-    url: string.isRequired,
+    url: string,
     git: string.isRequired,
     desc: string.isRequired,
     tags: arrayOf(string).isRequired,

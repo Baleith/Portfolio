@@ -4,14 +4,14 @@
 }
 .dividerFirst {
   margin-top: 6.25rem;
-  width: 45px;
+  width: 247px;
 }
 .dividerMiddle {
   margin: 0.25rem 0 0.25rem 0;
-  width: 65px;
+  width: 183px;
 }
 .dividerLast {
-  width: 45px;
+  width: 117px;
   margin-bottom: 6.25rem;
 }
 
@@ -26,14 +26,11 @@
     margin-right: auto!important;
   }
 }
-
 @media (max-width: 750px) { 
   .dividerFirst {
     margin-top: 3.25rem;
-    width: 45px;
   }
   .dividerLast {
-    width: 45px;
     margin-bottom: 3.25rem;
   }
 }

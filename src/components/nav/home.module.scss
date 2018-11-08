@@ -1,0 +1,22 @@
+.top {
+    place-self: end center;
+    padding-bottom: 0.25rem; 
+    &:focus {
+        outline: none;
+    }
+}
+.span {
+    composes: navText from '../../styles/_util.scss';
+}
+.active {
+    letter-spacing: 4em;
+    margin-right: -3em; 
+}
+
+
+@media (max-width: 400px) {
+    .active {
+        letter-spacing: 1em;
+        margin-right: -1em; 
+    }
+}

@@ -11,13 +11,13 @@ export const Even = ({ data }) => {
   } = data;
 
   return (
-    <div className={styles.odd}>
+    <div className={`${styles.even} ${styles.projectContainer}`}>
       <div className={styles.previewContainer}>
         <div className={styles.imgContainer}>
           <img className={styles.img} src={img} alt="ds" />
           <div className={styles.linksContainer}>
-            <Anchor url={git} name="<Källa>" />
-            <Anchor url={url} name="Besök" />
+            <Anchor url={git} name="</Källa>" />
+            {url ? <Anchor url={url} name="Besök" /> : null}
           </div>
         </div>
         <div className={styles.title}>
@@ -36,7 +36,7 @@ export const Even = ({ data }) => {
         </div>
 
       </div>
-      <div>
+      <div className={styles.dividerContainer}>
         <Divider type="even" />
       </div>
     </div>
@@ -47,7 +47,7 @@ Even.propTypes = {
   data: shape({
     img: string.isRequired,
     title: string.isRequired,
-    url: string.isRequired,
+    url: string,
     git: string.isRequired,
     desc: string.isRequired,
     tags: arrayOf(string).isRequired,

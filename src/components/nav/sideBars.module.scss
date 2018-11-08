@@ -1,0 +1,30 @@
+.right {
+  place-self: center start;
+  padding-left: 0.25rem;
+}
+.left {
+  place-self: center end;
+  padding-right: 0.25rem;
+  .hidden {
+    color: transparent;
+  }
+}
+.wrapper {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  vertical-align: middle;
+  position: relative;
+}
+.active {
+  animation: open 1.5s linear forwards;
+}
+@keyframes open{
+  from {
+      letter-spacing: 0;
+      margin-bottom: 0; 
+  }
+  to {
+      letter-spacing: 4em;
+      margin-bottom: -4em; 
+  }
+}
