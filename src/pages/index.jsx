@@ -1,65 +1,56 @@
 import React, { Component } from 'react';
 
-import { RightContainer } from '../containers/rightContainer';
-import { LeftContainer } from '../containers/leftContainer';
-import { Top } from '../components/nav/top';
-import { BottomContainer } from '../containers/bottomContainer';
-import { Content } from '../components/landing/landing';
+import { Contact } from '../components/nav/contact';
+import { Home } from '../components/nav/home';
+import { Bottom } from '../components/nav/bottom';
+import { Landing } from '../components/landing/landing';
 import Layout from '../components/layout';
 import { Projects } from '../components/projects/projects';
-
+import { FooterContainer } from '../components/footer/footerContainer';
+import { About } from '../components/nav/about';
 
 export default class IndexPage extends Component {
   state = {
-    moveToLeft: false,
-    moveToRight: false,
-    showProjects: false,
+    aboutActive: false,
+    contactActive: false,
+    homeActive: true,
   };
 
   handleClickAbout = () => {
     this.setState(state => ({
-      moveToRight: !state.moveToRight,
-      moveToLeft: false,
-      showProjects: false,
+      contactActive: false,
+      aboutActive: !state.aboutActive,
+      homeActive: false,
     }));
   }
 
   handleClickContact = () => {
     this.setState(state => ({
-      moveToLeft: !state.moveToLeft,
-      moveToRight: false,
-      showProjects: false,
+      aboutActive: false,
+      contactActive: !state.contactActive,
+      homeActive: false,
     }));
   }
 
-  handleClickProjects = () => {
-    console.log('har')
+  handleClickHome = () => {
     this.setState(state => ({
-      moveToLeft: false,
-      moveToRight: false,
-      showProjects: !state.showProjects,
-    }));
-  }
-
-  handleClick = (item) => {
-    console.log(item);
-    this.setState(state => ({
-      item: !state[item],
-      moveToLeft: false,
-      showProjects: false,
+      aboutActive: false,
+      contactActive: false,
+      homeActive: !state.homeActive,
     }));
   }
 
   render() {
-    const { moveToLeft, moveToRight, showProjects } = this.state;
+    const { aboutActive, contactActive, homeActive } = this.state;
     return (
       <Layout>
-        <LeftContainer onClick={this.handleClickAbout} />
-        <Top />
-        <RightContainer onClick={this.handleClickContact} />
-        <Content moveToLeft={moveToLeft} moveToRight={moveToRight} showProjects={showProjects} />
-        <BottomContainer onClick={this.handleClickProjects} />
+        <About aboutActive={aboutActive} onClick={this.handleClickAbout} />
+        <Home aboutActive={aboutActive} contactActive={contactActive} onClick={this.handleClickHome} />
+        <Contact contactActive={contactActive} onClick={this.handleClickContact} />
+        <Landing contactActive={contactActive} aboutActive={aboutActive} homeActive={homeActive} />
+        <Bottom />
         <Projects />
+        <FooterContainer />
       </Layout>
     );
   }

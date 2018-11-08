@@ -1,3 +1,8 @@
+.projectContainer:last-of-type {
+    .dividerContainer {
+        display: none;
+    }
+}
 .imgContainer {
     grid-area: img;
     display: grid;
@@ -11,18 +16,20 @@
         grid-area: 1 / 1 / span 1 / span 1;
         place-self: center;
         z-index: 5;
+        display: flex;
     }
 }
 
-.lastLetter {
-    font-size: 4rem; 
-    line-height: 1rem;
-    composes: primaryColor1 from '../../styles/_util.scss';
-}
 .title {
     grid-area: title;
     h2 {
         margin-bottom: 2.5rem;
+        line-height: 1.2;
+        &::first-letter {
+            font-size: 3.35rem;
+            color: #FF5E5B;
+            opacity: 0.7;
+        }
     }
 }
 .body {
@@ -103,8 +110,10 @@
     .even, .odd { 
         .title {
             h2 {
-                font-size: 1.5rem;
-                margin: 0 0 0.5rem 0;
+                margin: 1rem 0 1rem 0;
+                &::first-letter {
+                    font-size: 2.35rem;
+                }
             }
         }
     }

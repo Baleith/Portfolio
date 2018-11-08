@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:black, extrabold');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:600');
 // Body
 $body-bg: #f8fafc;
 
@@ -10,9 +10,7 @@ $print: #606060;
 $black:#373a3c;
 $blacker:#252627;
 html {
-  font-family: "Helvetica", sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   box-sizing: border-box;
   height: 100%;
   font-size: 16px;
@@ -25,7 +23,7 @@ body {
 }
 #app {
   display: grid;
-  grid-template-rows: 5vh 90vh 5vh auto;
+  grid-template-rows: 5vh 90vh 5vh auto auto;
   grid-template-columns: 5% 90% 5%;
 }
 #aside-left {
@@ -46,11 +44,15 @@ body {
 #projects {
   grid-area: 4 / 2 / span 1 / span 1;
 }
+#footer {
+  grid-area: 5 / 1 / span 1 / span 3;
+}
 
 a {
   color: #252627;
+  text-decoration: none;
 }
-h1, h2, h3, h4, span {
+h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
 }
 h2, h3, h4 {
@@ -61,19 +63,22 @@ h2, h3, h4 {
   margin: 0 0 2rem 0;
 }
 
-p {
+p, span, a {
   color:$black;
-  font-weight: 900;
+  font-weight: 600;
   font-family: 'Raleway', sans-serif;
   line-height: 1.75rem
 }
 
 @media (max-width: 400px) {
   #app {
-    grid-template-rows: 6vh 88vh 6vh auto;
+    grid-template-rows: 6vh 90vh 4vh auto auto;
     grid-template-columns: 10vw 80vw 10vw;
   }
   #projects {
     grid-area: 4 / 1 / span 1 / span 3;
+  }
+  h2, h3, h4 {
+    font-size: 1.5rem;
   }
 }

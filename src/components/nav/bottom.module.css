@@ -2,10 +2,20 @@
     text-align: center;
     padding-top: 0.25rem;
 }
-
-.span {
-    composes: navText from '../../styles/_util.scss';
+.arrow {
+    font-size: 2rem;
+    animation: bounce 2s infinite;
 }
-/* .active {
-    composes: primaryColor1 from '../../styles/_util.scss';
-} */
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }

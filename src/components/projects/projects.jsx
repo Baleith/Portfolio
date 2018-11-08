@@ -13,7 +13,9 @@ export const Projects = () => {
         <span className={styles.span} />
         {'Projects'}
       </h1>
+
       {projects}
+
     </div>
   );
 };

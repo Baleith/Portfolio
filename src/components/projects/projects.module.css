@@ -3,11 +3,7 @@
     padding: 4rem 8rem;
     composes: primaryBackgroundColor2 from '../../styles/_util.scss';
 }
-.projectsContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-}
+
 
 .h1 {
     display: inline-block;
@@ -21,6 +17,7 @@
     composes: crossedText from '../../styles/_util.scss';
     z-index: 2;
 }
+
 @media (max-width: 860px) { 
     .h1 {
         font-size: 4rem;

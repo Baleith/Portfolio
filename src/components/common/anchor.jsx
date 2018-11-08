@@ -1,11 +1,9 @@
 import React from 'react';
 import { string } from 'prop-types';
-import styles from './anchor.module.css';
+import styles from './anchor.module.scss';
 
 export const Anchor = ({ url, name }) => (
-  <span className={styles.span}>
-    <a href={url} target="_blank" rel="noopener noreferrer" alt="Github" className={styles.a}>{name}</a>
-  </span>
+  <a href={url} target="_blank" rel="noopener noreferrer" className={styles.bttn}>{name}</a>
 );
 
 Anchor.propTypes = {

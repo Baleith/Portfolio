@@ -4,7 +4,6 @@ import {
 } from 'prop-types';
 import { Even } from './even';
 import { Odd } from './odd';
-import './project.module.scss';
 
 export const Project = ({ data }) => {
   if (data.id % 2) {
@@ -18,7 +17,7 @@ Project.propTypes = {
     id: number.isRequired,
     img: string.isRequired,
     title: string.isRequired,
-    url: string.isRequired,
+    url: string,
     git: string.isRequired,
     desc: string.isRequired,
     tags: arrayOf(string).isRequired,
