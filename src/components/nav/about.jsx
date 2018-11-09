@@ -1,27 +1,20 @@
 import React from 'react';
 import { bool, func } from 'prop-types';
-import sideBars from './sideBars.module.scss';
-import navText from './navText.module.css';
+import styles from './about.module.scss';
 
 export const About = ({ aboutActive, onClick }) => (
   <aside
     id="aside-left"
-    className={`${navText.wrapper} ${sideBars.wrapper} ${sideBars.left}`}
+    className={styles.container}
     onClick={onClick}
     onKeyPress={onClick}
     role="button"
     tabIndex={0}
   >
-    <span className={`${aboutActive ? sideBars.active : null} ${navText.wrapper}`}>
+    <span className={`${aboutActive ? styles.active : styles.inActive} ${styles.span}`}>
       {'Om'}
-      <span className={sideBars.hidden}>x</span>
-      <span className={`${aboutActive ? navText.coloredText : null} ${navText.span}`}>
-        {'m'}
-      </span>
-      <span className={`${aboutActive ? navText.coloredText2 : null} ${navText.span}`}>
-        {'i'}
-      </span>
-      {'g'}
+      <span className={styles.hidden}>x</span>
+      {'mig'}
     </span>
   </aside>
 );

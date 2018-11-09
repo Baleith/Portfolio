@@ -4,7 +4,7 @@ import styles from './about.module.css';
 
 
 export const About = ({ isOpen }) => (
-  <div className={`${styles.container} ${isOpen ? styles.startTransform : styles.initialTransform}`}>
+  <div className={`${styles.container} ${isOpen ? styles.isOpening : styles.isClosing}`}>
     <div className={styles.wrapper}>
       <div className={styles.t1}>
         <h1 className={styles.h1}>

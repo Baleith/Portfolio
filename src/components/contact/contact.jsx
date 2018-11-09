@@ -4,7 +4,7 @@ import styles from './contact.module.css';
 import linkedin from '../../images/linkedin.svg';
 
 export const Contact = ({ isOpen }) => (
-  <div className={`${styles.container} ${isOpen ? styles.startTransform : styles.initialTransform}`}>
+  <div id="contact" className={`${styles.container} ${isOpen ? styles.isOpening : styles.isClosing}`}>
     <div className={styles.wrapper}>
       <div className={styles.t1}>
         <h1 className={styles.h1}>

@@ -7,12 +7,18 @@
 }
 .span {
     composes: navText from '../../styles/_util.scss';
+    position: relative;
+    letter-spacing: 1px;
+    transition: all .3s linear;
 }
 .active {
-    letter-spacing: 4em;
-    margin-right: -3em; 
+    letter-spacing: 4rem;
+    margin-bottom: -4em; 
 }
-
+.inActive {
+    letter-spacing: 0;
+    margin-bottom: 0; 
+}
 
 @media (max-width: 400px) {
     .active {

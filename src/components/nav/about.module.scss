@@ -1,0 +1,26 @@
+.container {
+  place-self: center end;
+  .hidden {
+    color: transparent;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  transition: all .3s linear;
+  position: relative;
+  composes: navText from '../../styles/_util.scss';
+}
+.active {
+  letter-spacing: 4rem;
+  margin-bottom: -4em; 
+}
+.inActive {
+  letter-spacing: 0;
+  margin-bottom: 0; 
+}
