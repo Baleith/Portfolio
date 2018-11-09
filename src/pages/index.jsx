@@ -13,14 +13,12 @@ export default class IndexPage extends Component {
   state = {
     aboutActive: false,
     contactActive: false,
-    homeActive: true,
   };
 
   handleClickAbout = () => {
     this.setState(state => ({
       contactActive: false,
       aboutActive: !state.aboutActive,
-      homeActive: false,
     }));
   }
 
@@ -28,26 +26,24 @@ export default class IndexPage extends Component {
     this.setState(state => ({
       aboutActive: false,
       contactActive: !state.contactActive,
-      homeActive: false,
     }));
   }
 
   handleClickHome = () => {
-    this.setState(state => ({
+    this.setState(({
       aboutActive: false,
       contactActive: false,
-      homeActive: !state.homeActive,
     }));
   }
 
   render() {
-    const { aboutActive, contactActive, homeActive } = this.state;
+    const { aboutActive, contactActive } = this.state;
     return (
       <Layout>
         <About aboutActive={aboutActive} onClick={this.handleClickAbout} />
         <Home aboutActive={aboutActive} contactActive={contactActive} onClick={this.handleClickHome} />
         <Contact contactActive={contactActive} onClick={this.handleClickContact} />
-        <Landing contactActive={contactActive} aboutActive={aboutActive} homeActive={homeActive} />
+        <Landing contactActive={contactActive} aboutActive={aboutActive} />
         <Bottom />
         <Projects />
         <FooterContainer />

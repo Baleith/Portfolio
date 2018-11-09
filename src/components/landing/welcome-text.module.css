@@ -1,20 +1,48 @@
-.welcomeContainer {
+.container {
+    grid-area: 1 / 1 / span 1 / span 1;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: auto;
     position: relative;
-    transform: rotate
 }
 
-
 .h1 {
-    z-index: 4;
     font-size: 6rem;
+    color: transparent;
+}
+.isOpening {
+    animation: isOpening 1s linear forwards;
+}
+.isClosing {
+    animation: isClosing 1s linear forwards;
+}
+@-webkit-keyframes isClosing {
+    from {
+        opacity: 1;
+        transform: rotate(0deg) scale(1.0);
+            
+    }
+    to {
+        opacity: 0;
+        transform: rotate(359deg) scale(0.0);
+            
+    }
+}
+@-webkit-keyframes isOpening {
+    from {
+        opacity: 0;
+        transform: rotate(359deg) scale(0.0);
+}
+to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1.0);
+}
 }
 .span1::after, .span2::after, .span3::after, .span4::after, .span5::after {
     content: '';
-    height: 100%;
-    width: 25%;
+    height: 300px;
+    width: 100px;
     background-color: #FF5E5B;
     position: absolute;
     top: 0;
@@ -26,8 +54,8 @@
 }
 .span1::before, .span2::before, .span3::before, .span4::before, .span5::before {
     content: '';
-    height: 100%;
-    width: 25%;
+    height: 300px;
+    width: 100px;
     background-color: #FF5E5B;
     position: absolute;
     top: 0;
@@ -40,12 +68,10 @@
 .span1::after {
     opacity: .1;
     transform: rotate(0deg);
-    animation: rotation1 5s infinite linear;
 }
 .span1::before {
     opacity: .2;
     transform: rotate(36deg);
-    animation: rotation2 5s infinite linear;
 }
 .span2::after {
     opacity: .3;

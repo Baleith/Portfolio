@@ -1,18 +1,5 @@
 .container {
-    display: flex;
-    overflow: hidden;
-    flex-flow: wrap;
-}
-.landing {
-    flex-basis: auto;
-    flex-grow:2;
-    transition: margin 1s ease-in-out; 
-    display: grid;
-    place-items: center center;
-}
-.moveToLeft {
-    margin: 4rem 0;
-}
-.moveToRight {
-    margin: 4rem 0;
+    display: grid; 
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
 }

@@ -5,18 +5,10 @@ import { Contact } from '../contact/contact';
 import { About } from '../about/about';
 import { WelcomeText } from './welcome-text';
 
-export const Landing = ({ homeActive, contactActive, aboutActive }) => (
+export const Landing = ({ contactActive, aboutActive }) => (
   <div id="landing" className={styles.container}>
     <About isOpen={aboutActive} />
-    <div className={`
-        ${styles.landing}
-        ${aboutActive ? styles.moveToRight : null}
-        ${contactActive ? styles.moveToLeft : null}
-        ${homeActive ? styles.removeRight : styles.resetTransform}
-      `}
-    >
-      { !contactActive && !aboutActive ? <WelcomeText /> : null }
-    </div>
+    <WelcomeText aboutActive={aboutActive} contactActive={contactActive} />
     <Contact isOpen={contactActive} />
   </div>
 );
@@ -24,5 +16,4 @@ export const Landing = ({ homeActive, contactActive, aboutActive }) => (
 Landing.propTypes = {
   aboutActive: bool.isRequired,
   contactActive: bool.isRequired,
-  homeActive: bool.isRequired,
 };

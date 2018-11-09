@@ -1,23 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Montserrat|Open+Sans');
 .container { 
+    grid-area: 1 / 1 / span 1 / span 1;
     display: flex;
-    width: 0;
-    height: 100%;
-    flex-flow: wrap;
-    transition: width 1s ease-out, opacity 0.5s ease-out;
-}
-.wrapper {
-    display: block;
     width: 100%;
-    margin: 4rem 0 4rem 4rem;
+    flex-flow: wrap;
+    transition: all 1s linear;
 }
-.initialTransform {
-    width: 0%;
+.isClosing {
     opacity: 0;
+    transform:scale(0);
 }
-.startTransform {
+.isOpening {
     opacity: 1;
-    width: 80%;
+    transform:scale(1);
 }
 .t1 {
     display: flex;
