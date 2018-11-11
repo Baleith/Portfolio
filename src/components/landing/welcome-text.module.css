@@ -12,10 +12,10 @@
     color: transparent;
 }
 .isOpening {
-    animation: isOpening 1s linear forwards;
+    animation: isOpening 0.8s linear forwards;
 }
 .isClosing {
-    animation: isClosing 1s linear forwards;
+    animation: isClosing 0.8s linear forwards;
 }
 @-webkit-keyframes isClosing {
     from {
@@ -43,7 +43,7 @@ to {
     content: '';
     height: 300px;
     width: 100px;
-    background-color: #FF5E5B;
+    background-color: #4ECDC4;
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +56,7 @@ to {
     content: '';
     height: 300px;
     width: 100px;
-    background-color: #FF5E5B;
+    background-color: #4ECDC4;
     position: absolute;
     top: 0;
     left: 0;
@@ -65,6 +65,7 @@ to {
     right: 0;
     z-index: -1;
 }
+
 .span1::after {
     opacity: .1;
     transform: rotate(0deg);
@@ -99,6 +100,7 @@ to {
     animation: rotation7 5s infinite linear;
 }
 .span4::before {
+    background-color: #FF6B6B;
     opacity: .8;
     transform: rotate(252deg);
     animation: rotation8 5s infinite linear;
@@ -109,6 +111,7 @@ to {
     animation: rotation9 8s infinite linear alternate;
 }
 .span5::before {
+    background-color: #FF6B6B;
     opacity: 1;
     transform: rotate(324deg);
     animation: rotation10 8s linear infinite alternate;
@@ -189,23 +192,26 @@ to {
         transform: rotate(611deg);
     }
 }*/
-@keyframes rotation9 {
-    from {
-        background-color: #FFA69E;
-        /* transform: rotate(288deg); */
+
+@media (max-width: 400px) {
+    .span1::after, .span2::after, .span3::after, .span4::after, .span5::after {
+        height: 210px;
+        width: 70px;
     }
-    to {
-        background-color: #84DCC6;
-        /* transform: rotate(647deg); */
+    .span1::before, .span2::before, .span3::before, .span4::before, .span5::before {
+        height: 210px;
+        width: 70px;
     }
 }
-@keyframes rotation10 {
-    0% {
-        background-color: #84DCC6;
-        /* transform: rotate(324deg); */
+
+.inProgress {
+    display: none;
+    margin-top: 30%;
+    color: red;
+    font-size: 2rem;
+}
+@media (max-width: 900px) {
+    .inProgress {
+        display: inherit;
     }
-    100% {
-        background-color: #A5FFD6;
-        /* transform: rotate(683deg); */
-    }
-} 
+}

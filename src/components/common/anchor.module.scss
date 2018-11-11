@@ -51,7 +51,7 @@
 }
 .bttn {
   color: rgba(255,255,255,1);
-	background: rgb(88, 248, 248);
+  composes: mainBackgroundColorGreen from '../../styles/_util.scss';
 	border-radius: 0;
 	padding: 0.5em 2em;
 	letter-spacing: 0.35em;

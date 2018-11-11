@@ -3,7 +3,7 @@ import tillnyktrad from '../../images/tillnyktrad.jpg';
 import matforgiftad from '../../images/matforgiftad.jpg';
 import hyped from '../../images/hyped.jpg';
 import fotboll from '../../images/fotboll.jpg';
-import portfolio from '../../images/fotboll.jpg';
+import portfolio from '../../images/portfolio.jpg';
 
 const sites = [
   {
@@ -12,7 +12,7 @@ const sites = [
     git: 'https://github.com/Baleith/Portfolio/tree/master',
     title: 'Portfolio',
     img: portfolio,
-    desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... med en tid om en annant som ocj skapa ingetr mer än text som behöver det annananana med annas ock med mera blev alltiod mer än du tror.',
+    desc: 'Den här sidan är utvecklad i React(Gatsby). Valt att använda mig av css-modules för att uppnå ',
     tags: ['React', 'Gatsby', 'Css-modules', 'Scss'],
   },
   {
@@ -21,7 +21,7 @@ const sites = [
     git: 'https://bitbucket.org/Baleith/public-matforgiftad/src/master/',
     title: 'Matförgiftad',
     img: matforgiftad,
-    desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
+    desc: 'En tjänst för att anmäla en misstänkt matförgiftning. Fyll i ett detaljerat formulär så hjälp vi dig att maila den ansvariga instansen i relevant kommun. Kodad i Laravel och Vue.js.',
     tags: ['Vue.js', 'PHP', 'Laravel', 'Scss'],
   },
   {
@@ -30,7 +30,7 @@ const sites = [
     git: 'https://bitbucket.org/Baleith/share-alkohol/src/master/',
     title: 'Tillnyktrad',
     img: tillnyktrad,
-    desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
+    desc: 'En alkoholförbrännings räknare byggd i Laravel och Vue.js. Med sökfunktion över hela systembolagets sortiment som hämtas över deras offentliga api.',
     tags: ['Vue.js', 'PHP', 'Laravel', 'Scss'],
   },
   {
@@ -39,7 +39,7 @@ const sites = [
     git: 'https://bitbucket.org/Baleith/share-styrbostad/src/master/',
     title: 'Styrbostad',
     img: styrbostad,
-    desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
+    desc: 'Samlingsida för hyreslägenheter. Lägenheterna samlas in med hjälp av en headless crawler i node.js, skrapar totalt ett 30tal bostadssidor. Utöver node.js så är backend byggd i Laravel och Vue.js för frontend.',
     tags: ['Vue.js', 'PHP', 'Laravel', 'Node', 'PhantomJS'],
   },
   {
@@ -48,7 +48,7 @@ const sites = [
     git: 'https://bitbucket.org/Baleith/footboll-api/src/master/',
     title: 'Fotbolls vm',
     img: fotboll,
-    desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
+    desc: 'Ett api över fotbolls vm med inlogg över OAuth2. Endpoints för bl.a lägga till och uppdatera matchresultat/lag/spelare, hämta hem spelare/lag utefter t.ex grupper, mål, utvisningar.',
     tags: ['PHP', 'Laravel', 'REST', 'OAuth2'],
   },
   {
@@ -57,7 +57,7 @@ const sites = [
     git: 'https://bitbucket.org/Baleith/share-hypedgamers/src/master/',
     title: 'Hypedgamers',
     img: hyped,
-    desc: 'Utvecklad i Laravel med delar av frontend i Vue.js.... OSVOSV  OSVOSV OSVOSV OSVOSV',
+    desc: 'Social gaming community, ungerfär som youtube fast för gaming. Utvecklad i Laravel. Features som uppladdning av bilder/video, inloggning, filtrering, upvoting, kommentering.  ',
     tags: ['PHP', 'Laravel', 'JavaScript', 'JQuery', 'Scss'],
   },
 ];
