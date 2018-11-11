@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:600');
-// Body
-$body-bg: #f8fafc;
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:600'); */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,700i,800,800i,900,900i|Raleway:400,500,600,700,700i,800,800i,900,900i');
+$lightGrayText: #494949;
+$darkGrayColor: #373a3c;
+$blackColor: #252627;
 
-// Colors
-$white: #FFFFFF;
-$primaryBackgroundColor1: #FF5E5B;
-$primaryBackgroundColor2: #F9F9F9;
-$print: #606060;
-$black:#373a3c;
-$blacker:#252627;
 html {
   text-size-adjust: 100%;
   box-sizing: border-box;
@@ -49,14 +44,14 @@ body {
 }
 
 a {
-  color: #252627;
+  color: $blackColor;
   text-decoration: none;
 }
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
 }
 h2, h3, h4 {
-  color: $blacker;
+  color: $blackColor;
   line-height: 2.75rem;
   font-weight: bolder;
   font-size: 2rem;
@@ -64,7 +59,7 @@ h2, h3, h4 {
 }
 
 p, span, a {
-  color:$black;
+  color: $darkGrayColor;
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
   line-height: 1.75rem
@@ -72,7 +67,7 @@ p, span, a {
 
 @media (max-width: 400px) {
   #app {
-    grid-template-rows: 6vh 90vh 4vh auto auto;
+    grid-template-rows: 6vh 88vh 6vh auto auto;
     grid-template-columns: 10vw 80vw 10vw;
   }
   #projects {

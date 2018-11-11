@@ -1,28 +1,45 @@
+.blackColor {
+  color: #252627;
+}
+.darkGrayColor {
+  color: #373a3c;
+}
+.lightGrayText {
+  color: #494949;
+}
+.mainColorRed {
+   color: #FF6B6B;
+}
+.mainBackgroundColorRed {
+  background-color: #FF6B6B;
+}
+.mainBackgroundColorGreen {
+  background-color: #4ECDC4;
+}
+.mainColorGreen {
+  color: #4ECDC4;
+}
 .navText {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.25rem;
-  font-family: Raleway, sans-serif
+  font-family: Raleway, sans-serif;
 }
-.navText:focus {
+/* .navText:focus {
   outline: none;
-}
+} */
 .crossedText::after {
   content: '';
   height: 40%;
-  background-color: #FF5E5B;
+  background-color: #FF6B6B;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   margin: auto;
   right: 0;
-  opacity: .5;
+  opacity: .7;
   z-index: -1;
 }
-
-.blackBackgroundColor {
-  background-color:#252627;
-} 
 
 

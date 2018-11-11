@@ -4,11 +4,13 @@
   flex-flow: wrap;
   padding: 0;
 }
+.ul li {
+  font-size: .9rem;
+}
 
 .span {
-  color: #252627;
   padding: 0 0.5rem;
-  composes: primaryBackgroundColor2 from '../../styles/_util.scss';
+  composes: lightGrayText from '../../styles/_util.scss';
 }
 .span:nth-of-type(1) {
   padding-left: 0;
